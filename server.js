@@ -23,3 +23,11 @@ app.get("/api/notes", (req, res) => {
   const notesData = JSON.parse(fs.readFileSync("./db.json", "utf8"));
   res.json(notesData);
 });
+
+app.post("/api/notes", (req, res) => {});
+
+app.delete("/api/notes/:id", (req, res) => {});
+
+app.listen(PORT, () => {
+  console.log("Server is listening on http//localhost:$PORT");
+});
